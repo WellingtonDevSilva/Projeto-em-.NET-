@@ -1,0 +1,51 @@
+﻿@model Atividade_Avaliativa.Models.Pessoa
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Deletar</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_Nascimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Data_Nascimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+    
+    <form asp-action="Deletar">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Deletar" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>
